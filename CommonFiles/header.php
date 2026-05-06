@@ -131,12 +131,12 @@ function web_header($opt = [])
         <script src="{$prefix}js/{$css_name}.js"></script>
         {$wh_config['header_extras']}
       </head>
-
+    
       <body class="d-flex flex-column min-vh-100" id="html-body" style="background: linear-gradient(to right, #252a2b, #171c1d, #0c1112);">
-
+    
        <nav class="navbar navbar-expand-lg navbar-custom-color fixed-top">
               <div class="container-fluid">
-
+    
                 <a class="navbar-brand invicta-wordmark" href="{$config['web']['confurl']}" aria-label="{$conf_brand_label}">
                   <strong class="invicta-wordmark-line invicta-wordmark-line-top">{$conf_brand_top}</strong>
                   <span class="invicta-wordmark-mark" aria-hidden="true">
@@ -145,7 +145,7 @@ function web_header($opt = [])
                   <!-- <span class="invicta-wordmark-divider" aria-hidden="true">-&gt;&gt;&gt;&gt; . &lt;&lt;&lt;&lt;-</span> -->
                   <span class="invicta-wordmark-line invicta-wordmark-line-bottom">{$conf_brand_bottom}</span>
                 </a>
-
+    
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -155,7 +155,7 @@ function web_header($opt = [])
               </div><!--./container-->
             </nav>
             
-
+    
         <!-- HEADER -->
         <div id="IG27-carousel" class="carousel slide carousel-fade{$carousel_class}" data-bs-ride="carousel">
             <div class="carousel-logo">
@@ -181,7 +181,7 @@ function web_header($opt = [])
                 {$carousel_items}
             </div>
             {$carousel_indicators_html}
-
+    
             <!-- Carousel Controls -->
             <!-- <button class="carousel-control-prev" type="button" data-bs-target="#IG27-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -193,8 +193,8 @@ function web_header($opt = [])
             </button> -->
         </div>
         <!-- HEADER -->
-
-
+    
+    
       <div class="container" id="main-content">
       
     HTML;

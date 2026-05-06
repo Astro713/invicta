@@ -111,10 +111,10 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
 
         <hr class="mt-5 mb-5" style="border-color: transparent;">
         
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-5 mb-5">
         <div class="col-md-6 text-center">
             <a href="#">
-                <img src="images/invicta_logo.png" alt="" class="img-fluid" style="max-height: 350px; width: auto;">
+                <img src="images/invicta_logo.png" alt="" class="img-fluid" style="max-height: 275px; width: auto;">
             </a>
         </div>
         </div>

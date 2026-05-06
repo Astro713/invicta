@@ -1,8 +1,9 @@
 <?php
-require('G:/WWWRoot/Classes/aws/aws-autoloader.php');
-use Aws\S3\S3Client;
-use Aws\CloudFront\CloudFrontClient;
-use Aws\Exception\AwsException;
+$aws_autoloader = 'G:/WWWRoot/Classes/aws/aws-autoloader.php';
+if (file_exists($aws_autoloader))
+{
+  require($aws_autoloader);
+}
 
 Class AWSTools
 {
@@ -10,8 +11,13 @@ Class AWSTools
   {
     global $config;
 
+    if (!class_exists('\Aws\CloudFront\CloudFrontClient'))
+    {
+      return rtrim($config['aws']['cloudfronturl'] ?? '', '/') . '/' . ltrim($key, '/');
+    }
+
     // Create a CloudFront Client
-    $client = new Aws\CloudFront\CloudFrontClient([
+    $client = new \Aws\CloudFront\CloudFrontClient([
         'profile' => 'default',
         'version' => '2014-11-06',
         'region' => $config['aws']['region']
@@ -50,9 +56,14 @@ Class AWSTools
   function getS3SignedURL($key, $expiry_seconds)
   {
     global $config;
+
+    if (!class_exists('\Aws\S3\S3Client'))
+    {
+      return rtrim($config['aws']['s3url'] ?? '', '/') . '/' . ltrim($key, '/');
+    }
     
     // Create an S3 Client
-    $s3Client = new Aws\S3\S3Client([
+    $s3Client = new \Aws\S3\S3Client([
         'profile' => $config['aws']['credential_download_profile'],
         'region' => $config['aws']['region'],
         'version' => 'latest',
