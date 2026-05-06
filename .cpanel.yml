@@ -1,0 +1,15 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/CommonFiles
+    - /bin/mkdir -p $DEPLOYPATH/css
+    - /bin/mkdir -p $DEPLOYPATH/js
+    - /bin/mkdir -p $DEPLOYPATH/images
+    - /bin/cp *.php $DEPLOYPATH
+    - /bin/cp CommonFiles/*.php $DEPLOYPATH/CommonFiles/
+    - /bin/cp css/* $DEPLOYPATH/css/
+    - /bin/cp js/* $DEPLOYPATH/js/
+    - /bin/cp -R images/* $DEPLOYPATH/images/
+    - /bin/cp .htaccess $DEPLOYPATH
