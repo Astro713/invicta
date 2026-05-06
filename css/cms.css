@@ -1,0 +1,121 @@
+@import url('badges.css');
+@import url('virtual.css');
+@import url('exhibits.css');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/* Show it is fixed to the top */
+body {
+/* .container.cms-main { */
+  background-color: inherit;
+}
+body {
+  min-height: 90vh;
+  margin-bottom: 6rem;
+}
+.conf-info {
+  position: relative;
+  top: -340px;
+}
+/* #auth-nav {
+  margin: 10px 0px;
+}
+#auth-nav .btn {
+  padding: 0.1rem 0.25rem;
+} */
+.cms-info-bottom {
+  background-color: #FF6161;
+}
+table.PaperStatusGrid {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+}
+
+table.PaperStatusGrid tr.HeaderRow {
+  background-color: black;
+  color: white;
+}
+
+table.PaperStatusGrid tr.HeaderRow th {
+  font-weight: bold;
+  text-align: left;
+  padding: 2px 10px;
+}
+
+table.PaperStatusGrid td {
+  padding: 2px 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+table.regfees {
+
+}
+table.regfees td.price, table.regfees th.price {
+  text-align: right;
+}
+table.SessionList {
+  border-style: none;
+}
+table.SessionList tr td {
+  border-style: none;
+}
+td.locationcell {
+  border-style: solid;
+  text-align: right;
+}
+td.daycell {
+  color: red;
+  background-color: inherit;
+  font-size: larger;
+  font-weight: bold !important;
+  padding-left: 0 !important;
+}
+td.timecell {
+  color: black;
+  background-color: inherit;
+  padding-left: 1em !important;
+  font-weight: bold !important;
+}
+.eventcell {
+}
+.eventlocation {
+}
+.eventrow {
+  border-top: 1px solid #bbbbbb;
+}
+.eventrow:first-child {
+  border-top: none;
+}
+table.SessionDescription {
+  border-collapse: collapse;
+  border-style: none;
+  width: 100%;
+}
+table.SessionDescription td {
+  border-style: none;
+}
+table.PaperDescription {
+  border-collapse: collapse;
+  border-style: none;
+}
+table.PaperDescription td {
+  border-style: none;
+}
+table.AbstractSearch {
+  border-collapse: collapse;
+  border-style: none;
+}
+table.AbstractSearch td {
+  border-style: none;
+}
+table.ResultsForm {
+}
+
+
+.header-social-icons .fab
+{
+  padding: 0 0.3rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}

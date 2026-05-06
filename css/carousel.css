@@ -1,0 +1,318 @@
+#IG27-carousel {
+  height: calc(15rem + 40vw);
+  max-height: 50rem;
+  border-bottom: 2px solid #000000;
+}
+
+#IG27-carousel.compact {
+  height: calc(9rem + 26vw);
+  max-height: 32rem;
+}
+
+#IG27-carousel .carousel-inner {
+  height: 100%;
+}
+
+#IG27-carousel .carousel-item {
+  height: 100%;
+}
+
+/* .carousel-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+} */
+
+#IG27-carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-logo {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.carousel-logo img {
+  height: auto;
+  width: 20vw;
+  max-width: 250px;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.99));
+}
+
+.carousel-brand-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 1.2vw, 18px);
+  margin-top: clamp(8px, 1vw, 14px);
+  color: #ffffff;
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  font-size: clamp(18px, 2vw, 30px);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.85);
+}
+
+.carousel-brand-title span {
+  display: block;
+  width: clamp(38px, 5.5vw, 84px);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95));
+}
+
+.carousel-brand-title span:last-child {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), transparent);
+}
+
+.carousel-brand-title strong {
+  font: inherit;
+}
+
+#IG27-carousel.compact .carousel-logo img {
+  width: 22vw;
+  max-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .carousel-logo {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .carousel-logo img {
+    width: 17.5vw;
+    max-width: 125px;
+    height: auto;
+  }
+
+  .carousel-brand-title {
+    gap: 8px;
+    margin-top: 6px;
+    font-size: clamp(11px, 3.2vw, 16px);
+    letter-spacing: 0.05em;
+  }
+
+  .carousel-brand-title span {
+    width: clamp(18px, 7vw, 38px);
+    height: 1px;
+  }
+
+  #IG27-carousel.compact .carousel-logo img {
+    width: 27vw;
+    max-width: 150px;
+  }
+}
+.carousel-logos-right {
+  position: absolute;
+  top: 40px;
+  right: 1.5vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-logos-right a {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.carousel-logos-right img {
+  width: 10vw;
+  max-width: 150px;
+  height: auto;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.99));
+}
+
+@media (max-width: 768px) {
+  .carousel-logos-right {
+    top: 30px;
+    right: 2vw;
+  }
+
+  .carousel-logos-right img {
+    width: 9vw;
+    max-width: 125px;
+    height: auto;
+  }
+
+  .carousel-logos-right a {
+    margin-bottom: 20px;
+  }
+}
+
+.carousel-item {
+  position: relative;
+}
+
+#IG27-carousel .carousel-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#IG27-carousel .carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+#IG27-carousel .carousel-item.dim-animate::before {
+  opacity: 0;
+}
+
+.carousel-item img {
+  position: relative;
+  z-index: 0;
+}
+
+.carousel-caption {
+  z-index: 2;
+}
+
+#IG27-carousel .carousel-slide-caption {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  z-index: 2;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  font-size: clamp(10px, 0.95vw, 14px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  #IG27-carousel .carousel-slide-caption {
+    right: 1%;
+    bottom: 1%;
+    padding: 1px 4px;
+    border-radius: 4px;
+    font-size: clamp(7px, 1.8vw, 9px);
+    letter-spacing: 0.04em;
+  }
+
+  #IG27-carousel .carousel-indicators {
+    display: none;
+  }
+}
+
+
+
+.carousel-item .caption-box .conf-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#IG27-carousel:not(.initialized) .carousel-item.active .caption-box .conf-name {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 1s ease-out 0.5s forwards;
+}
+
+.carousel-item .caption-box .conf-date-location {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#IG27-carousel:not(.initialized) .carousel-item.active .caption-box .conf-date-location {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideDown 1s ease-out 1s forwards;
+}
+
+#IG27-carousel:not(.initialized) .carousel-item.active .caption-box .conf-abbrev {
+  opacity: 0;
+  transform: translate(-50%, -50%) translateX(-50px);
+  animation: slideInLeft 1s ease-out 0.35s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#IG27-carousel:not(.initialized) .carousel-logo {
+  opacity: 0;
+  transform: translate(-50%, -50%) translateX(-50px);
+  animation: slideInLeft 1s ease-out 0.2s forwards;
+}
+
+#IG27-carousel:not(.initialized) .carousel-logo .carousel-brand-title {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 1s ease-out 0.45s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#IG27-carousel:not(.initialized) .carousel-logos-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease-out 0.2s forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

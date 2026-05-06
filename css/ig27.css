@@ -1,0 +1,460 @@
+#IG27-carousel .carousel-item .carousel-caption {
+  position: absolute;
+  top: clamp(6%, 6.5vw, 9%);
+  left: 35px !important;
+  right: auto !important;
+  transform: none !important;
+  width: max-content !important;
+  max-width: calc(100% - 60px) !important;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.35));
+}
+
+.caption-box {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: clamp(14px, 1.8vw, 32px);
+}
+
+.conf-year-stack {
+  display: grid;
+  grid-auto-rows: minmax(0, 1fr);
+  gap: clamp(3px, 0.75vw, 10px);
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(58px, 9.35vw, 119px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: #ffffff;
+  text-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
+  margin-top: clamp(0px, 0.4vw, 6px);
+}
+
+.conf-year-stack span {
+  display: block;
+}
+
+.conf-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(6px, 0.9vw, 12px);
+  margin-top: clamp(6px, 0.9vw, 12px);
+}
+
+.conf-name {
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(21px, 2.7vw, 33px);
+  line-height: 1.05;
+  white-space: nowrap;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.conf-date-location {
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(18px, 2vw, 30px);
+  letter-spacing: 0.04em;
+  color: #f4f7fb;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 992px) {
+  .carousel-caption {
+    display: none !important;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.carousel-control-prev {
+  left: 8.75%;
+}
+
+.carousel-control-next {
+  right: 8.75%;
+}
+
+#IG27-carousel.compact .carousel-item .carousel-caption {
+  top: 50px;
+  left: 25px !important;
+  right: auto !important;
+  width: max-content !important;
+  max-width: calc(100% - 60px) !important;
+  justify-content: flex-start !important;
+}
+
+#IG27-carousel.compact .caption-box {
+  gap: clamp(10px, 1.2vw, 20px);
+  max-width: min(820px, 92vw);
+  padding: 0;
+}
+
+#IG27-carousel.compact .conf-abbrev {
+  font-size: clamp(28px, 3.4vw, 44px);
+}
+
+#IG27-carousel.compact .conf-year-stack {
+  font-size: clamp(39px, 7.1vw, 82px);
+  gap: clamp(3px, 0.55vw, 7px);
+}
+
+#IG27-carousel:not(.initialized) .carousel-item.active .conf-year-stack {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: confYearSlideIn 1s ease-out 0.45s forwards;
+}
+
+@keyframes confYearSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#IG27-carousel.compact .conf-title-block {
+  gap: clamp(4px, 0.7vw, 10px);
+  margin-top: clamp(3px, 0.6vw, 8px);
+}
+
+#IG27-carousel.compact .conf-name {
+  font-size: clamp(18px, 2.4vw, 32px);
+  white-space: nowrap;
+}
+
+#IG27-carousel.compact .conf-date-location {
+  font-size: clamp(15px, 1.9vw, 24px);
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+.sidebar-widget:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-custom-color {
+  background: transparent !important;
+}
+
+
+@media (max-width: 992px) {
+  .navbar-custom-color {
+    background: linear-gradient(to right, #4a5455, #383f40, #2d3334) !important;
+  }
+}
+
+
+.navbar-custom-color .navbar-brand,
+.navbar-custom-color a {
+  color: #ffffff !important;
+}
+
+.navbar-custom-color .navbar-brand.invicta-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  min-width: 126px;
+  margin-right: 1.25rem;
+  padding: 4px 0;
+  color: #ffffff !important;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+.invicta-wordmark-line {
+  display: block;
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  font-size: clamp(0.9rem, .95vw, 1.15rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.invicta-wordmark-line-top {
+  font-weight: 800;
+}
+
+.invicta-wordmark-line-bottom {
+  font-size: clamp(0.53rem, 0.57vw, 0.72rem);
+  letter-spacing: 0.14em;
+  margin-top: 4.5px;
+}
+
+.invicta-wordmark-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.invicta-wordmark-mark img {
+  display: block;
+  width: clamp(30px, 2.3vw, 45px);
+  height: clamp(30px, 2.3vw, 45px);
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+}
+
+.navbar-custom-color .dropdown-menu a {
+  color: #000000 !important;
+}
+
+@media (max-width: 575.98px) {
+  .navbar-custom-color .navbar-brand.invicta-wordmark {
+    min-width: 100px;
+    margin-right: 0.75rem;
+  }
+
+  .invicta-wordmark-line {
+    font-size: 0.72rem;
+  }
+
+  .invicta-wordmark-line-bottom {
+    font-size: 0.52rem;
+  }
+
+  .invicta-wordmark-mark img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+#footer {
+  background: linear-gradient(to left, #252a2b, #171c1d, #0c1112);
+}
+
+.footer a {
+  color: white;
+}
+
+#footer p {
+  margin-bottom: 0;
+}
+
+.footer {
+  padding: 5px 0;
+  font-size: 0.80rem;
+}
+
+@media (max-width: 795px) {
+  .footer {
+    padding: 0px 0;
+    font-size: 0.5rem;
+  }
+}
+
+.fs-custom {
+  font-size: 1.75rem;
+}
+
+@media (max-width: 795px) {
+  .fs-custom {
+    font-size: 1rem;
+  }
+}
+
+.ig-lime-text {
+  color: #89FF77;
+}
+
+.ig-primary-text {
+  color: #261659;
+}
+
+.ig-secondary-text {
+  color: #322070;
+}
+
+.ig-index-font-h1 {
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  
+}
+
+.ig-index-font-h2 {
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+}
+
+p,
+li,
+ul,
+ol,
+tr,
+td,
+th,
+thead,
+tbody,
+table,
+span,
+div,
+nav,
+button,
+input,
+select,
+textarea {
+  font-family: 'Helvetica Now Text', 'Helvetica Neue', Helvetica, Arial, oswald;
+  font-weight: 400;
+  font-style: normal;
+}
+
+b,
+strong,
+fw-bold {
+  font-family: 'Helvetica Now Text', 'Helvetica Neue', Helvetica, Arial, oswald;
+  font-weight: 700;
+  font-style: normal;
+}
+
+em {
+  font-family: 'Helvetica Now Text', 'Helvetica Neue', Helvetica, Arial, oswald;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+
+}
+
+.committee-cards .card {
+  border: 0;
+  border-radius: 0;
+  color: #000000;
+  box-shadow: 5px 5px 10px #e1e1e1;
+  padding: 1em 0;
+  border-bottom-right-radius: 4em;
+  border-top-left-radius: 4em;
+  background: linear-gradient(to left, #ffffff 50%, #5291AC 50%);
+  background-size: 200%;
+  background-position: right;
+  transition: all 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.committee-cards .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  transition: color 0.5s ease-out;
+}
+
+.committee-cards .card-text {
+  flex-grow: 1;
+}
+
+.committee-cards .card-icon {
+  text-align: left;
+  padding: 1rem 0;
+  margin: 0 1em;
+  transition: color 0.5s ease-out;
+}
+
+.committee-cards .card:hover {
+  background-position: left;
+  color: #ffffff;
+}
+
+.committee-cards .card:hover .card-body,
+.committee-cards .card:hover .card-title,
+.committee-cards .card:hover .card-text,
+.committee-cards .card:hover .card-text small {
+  color: #ffffff !important;
+}
+
+.destination-section {
+  background-color: #0000008f !important;
+  color: #ffffff;
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+  box-shadow: 0 0 0 100vmax #0000008f;
+  clip-path: inset(0 -100vmax);
+  padding: 3rem 0;
+  clear: both;
+}
+
+.destination-section > .container {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.destination-section .ig-index-font-h2,
+.destination-section .p-helvetica {
+  color: #ffffff !important;
+}
+
+/* .destination-video-wrapper {
+  background-color: #0f2742;
+  border: 1px solid #0f2742;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.destination-video {
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+} */
+
+@media (max-width: 767.98px) {
+  .destination-section {
+    padding: 2.5rem 0;
+  }
+}

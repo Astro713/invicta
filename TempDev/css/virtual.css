@@ -1,0 +1,80 @@
+.daycell {
+    color: #ff0000;
+    background-color: inherit;
+    font-size: larger;
+    font-weight: bold !important;
+    padding-left: 0 !important;
+    padding-bottom: 0.5rem;
+}
+.timecell {
+    margin-bottom: 0.5rem;
+    color: black;
+    background-color: inherit;
+    padding-left: 1em !important;
+    font-weight: bold !important;
+}
+.eventlocation {
+}
+.session-paper-info,
+.session-paper-info a
+{
+    color: black !important;
+	text-decoration: none;
+}
+.session-paper-info .paper-title {
+	font-family: revert;
+	font-size: 1.2rem;
+	font-weight: bolder;
+	margin-bottom: 0.2rem;
+	margin-top: 0;
+	color: black;
+}
+.session-paper-info {
+  background-color: #5daffb;
+  box-shadow: 2px 2px 6px rgb(0 0 0 / 30%);
+}
+
+.session-paper-info.session-break {
+	background-color: #007bff!important;
+}
+
+.session-paper-info .paper-times {
+  font-style: italic;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.session-detail .session-times {
+	font-size: 1.0rem;
+}
+.card.paper-session-index a.list-group-item {
+	line-height: 1.1;
+}
+
+.paper-session-index .list-group-item {
+	  color: black !important;
+	  text-decoration: none !important;
+}
+  
+.paper-session-index .list-group-item.active {
+	background-color: #5da1ff;
+	/* color: white !important; */
+	/* background-image: url('../images/LightBlueBG.jpg');
+	background-size: cover;
+	background-position: 50% 50%; */
+}
+.breadcrumb
+{
+	/* background-color: #0098ff; */
+}
+.breadcrumb-item+.breadcrumb-item::before
+{
+	color: black;
+}
+.breadcrumb > .breadcrumb-item a,
+.breadcrumb > .breadcrumb-item.active
+{
+	color: black !important;
+}

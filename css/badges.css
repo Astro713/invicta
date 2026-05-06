@@ -1,0 +1,114 @@
+.badge.tz-badge {
+    padding: 3px 6px;
+}
+.badge.badge-tz1 {
+    color: #212529;
+    background-color: #ffc107;
+}
+.badge.badge-tz2 {
+    color: #fff;
+    background-color: #6c757d;
+}
+.badge.badge-tz3 {
+    color: #fff;
+    background-color: #17a2b8;
+}
+.badge.badge-tz4 {
+    color: #fff;
+    background-color: #007bff;
+}
+
+table.SessionList .badge {
+    filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5));
+    margin-right: 0.2rem;
+}
+
+.badge.badge-ss {
+    color: black;
+    background-color: mediumturquoise;
+}
+
+.badge.badge-inperson {
+    color: white;
+    background-color:tomato;
+}
+
+.badge.badge-tutorial {
+    color: black;
+    background-color: yellowgreen;
+}
+
+.badge.badge-hybrid {
+    color: white;
+    background-color: blueviolet;
+}
+
+.badge.badge-plenary {
+    color: white;
+    background-color: crimson;
+}
+
+.badge.badge-workshop {
+    color: white;
+    background-color: maroon;
+}
+
+.badge.inperson-oral {
+    color: white;
+    background-color: goldenrod;
+}
+
+.badge.inperson-mm {
+    color: white;
+    background-color:blue;
+}
+.badge.virtual-oral
+{
+    background-color: mediumblue;
+    color: white;
+}
+.badge.virtual-mm
+{
+    background-color:fuchsia;
+    color: white;
+}
+.badge-pendingevent {
+    background-color: lightcyan;
+    border: 1px solid deepskyblue;
+    color: black;
+}
+.badge-startingevent {
+    background-color: LightGreen;
+    border: 1px solid darkgreen;
+    color: black;
+}
+.badge-activeevent {
+    background-color: green;
+    border: 1px solid darkgreen;
+    color: white;
+}
+.badge-startevent {
+    background-color: tomato;
+    border: 1px solid darkred;
+    color: black;
+}
+.badge-endingevent {
+    background-color: bisque;
+    border: 1px solid darkgoldenrod;
+    color: black;
+}
+.badge-expiredevent {
+    background-color: darksalmon;
+    border: 1px solid darkred;
+    color: black;
+}
+.badge.subscribed {
+    background-color: teal;
+    border: 1px solid darkslategrey;
+    color: white;
+}
+.badge.badge-error {
+    background-color: orangered;
+    border: 1px solid darkred;
+    color: white;
+}
