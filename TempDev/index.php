@@ -51,7 +51,8 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
         <p class="mt-5 mb-3 text-light">Welcome to Reykjavík Iceland IGARSS 2027,</p>
         <p class="text-light mt-3 mb-5">The 2027 International Geoscience and Remote Sensing Symposium (IGARSS) will take place in <span class="ig-lime-text">Reykjavík, Iceland, on July 11-16 2027</span>. The flagship conference of the IEEE Geoscience and Remote Sensing Society (GRSS) is aimed at providing a platform for sharing knowledge and experience on recent developments and advancements in geoscience and remote sensing technologies, particularly in the context of earth observation, disaster monitoring and risk assessment.</p>
     </div> -->
-    <div class="float-end col-12 col-md-4 col-lg-3 ms-4 mt-4">
+    <div class="home-mobile-flow">
+    <div class="home-tiktok-panel float-end col-12 col-md-4 col-lg-3 ms-4 mt-4">
 
         <div class="col">
             <iframe
@@ -91,6 +92,7 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
         <p class="ig-index-font-h2 mt-5 ">Invicta's Azula</p>
 
         <p class="text-start text-light">Azula is a majestic Cane Corso who reflects the original standard of the breed with strength, balance, athleticism, and presence. Her bloodline is primarily European and includes respected pedigree influence from X-Man of Barcelona, Spain. She embodies the qualities that make the Cane Corso exceptional: powerful movement, intense drive, and reliable protective instincts. Whether in a family setting, on open land, or in a working environment, Azula carries herself with the awareness, loyalty, and purpose expected from a true Cane Corso.</p>
+    </div>
         <hr class="mt-5 mb-5" style="border-color: transparent;">
 
         <div class="destination-section">
@@ -119,26 +121,6 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
 
 </div>
 
-<style>
- #index-h1 {
-  text-decoration-line: overline underline;
-  text-underline-offset: 12.5px;
-  text-decoration-color: #89FF77;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.tiktok-player,
-.instagram-player {
-  display: block;
-  width: 100%;
-  max-width: 500px;
-  min-width: 0;
-  aspect-ratio: 9 / 16;
-  border: 0;
-}
-</style>
 <?php
 // End Page Display
 web_footer(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'footer_extras'=>null]);

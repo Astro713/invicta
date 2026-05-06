@@ -171,10 +171,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.15);
   z-index: 1;
   opacity: 1;
-  transition: opacity .5s ease-in;
+  transition: opacity .75s ease-in;
 }
 
 #IG27-carousel .carousel-item.dim-animate::before {
