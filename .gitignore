@@ -1,0 +1,4 @@
+CommonFiles/_config.toml
+TempDev/CommonFiles/_config.toml
+**/config.toml
+**/_config.toml
