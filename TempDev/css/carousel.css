@@ -79,13 +79,13 @@
 }
 
 #IG27-carousel.compact .carousel-logo img {
-  width: 22vw;
-  max-width: 320px;
+  width: 20vw;
+  max-width: 200px;
 }
 
 @media (max-width: 768px) {
   .carousel-logo {
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -109,7 +109,7 @@
   }
 
   #IG27-carousel.compact .carousel-logo img {
-    width: 27vw;
+    width: 15vw;
     max-width: 150px;
   }
 }

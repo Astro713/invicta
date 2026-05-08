@@ -27,6 +27,13 @@ function get_menu()
   return [
 
       ["Home Page", "index.php", null, false, [], [] ],
+      
+      ["Our Dogs", "dogs.php", null, false, [], [] ],
+
+      ["Available Puppies", "puppies.php", null, false, [], [] ],
+
+      
+      ["About Us", "about.php", null, false, [], [] ],
 
   //   [ "Home Page", null, [
   //     ["Welcome",                   "index.php", null, [], []],

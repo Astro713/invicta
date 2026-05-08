@@ -58,23 +58,24 @@ function web_footer($opt = [])
       <div class="container px-2">
           <div class="row">
               <div class="col-6 col-lg-4">
-                  <h4 class="">{$config['conference']['conferencename']}</h4>
+                  <h5 class="mt-3 mb-1">{$config['conference']['conferencename']}</h5>
                   <p>Location: {$config['conference']['conferencelocation']}</p>
               </div>
               <div class="col">
-                  <h5>Menu</h5>
+                  <h6 class="mt-3 mb-1">Menu</h6>
                   <ul class="list-unstyled ">
                       <li class="py-1"><a href="index.php">Home</a></li>
+                      <li class="py-1"><a href="about.php">About Us</a></li>
                   </ul>
               </div>
               <div class="col">
-                  <h5>Contact</h5>
+                  <h6 class="mt-3 mb-1">Contact</h6>
                   <ul class="list-unstyled ">
                       <li class="py-1">Contact: <a href="mailto:{$config['email']['emailsupport']}" class="text-white">{$config['email']['emailsupport']}</a></li>
                   </ul>
               </div>
               <div class="col-6 col-lg-3 text-lg-center">
-                  <h5>Social Media Links</h5>
+                  <h6 class="mt-3 mb-1">Social Media Links</h6>
                   <div class="social-media ">
                     <a target="_blank" href="https://www.tiktok.com/@azulathecanecorso" class="text-white mx-2"><i class="bi bi-tiktok fs-custom"></i></a>
                     <a target="_blank" href="https://www.instagram.com/azulathecanecorso/" class="text-white mx-2"><i class="bi bi-instagram fs-custom"></i></a>
@@ -84,7 +85,7 @@ function web_footer($opt = [])
           </div>
           <hr>
           <div class="d-sm-flex justify-content-between py-3">
-              <p>&copy;{$year} <a href="#" target="_blank" class="text-white">Invicta Cane Corso.</a></p>
+              <p>&copy;{$year} <a href="#" target="_blank" class="text-white">Invicta Cane Corso</a></p>
               <!-- <p class="text-light text-decoration-none pe-4">
                   {$last_mod_date}
               </p> -->

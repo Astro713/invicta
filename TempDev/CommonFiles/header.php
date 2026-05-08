@@ -48,14 +48,14 @@ function web_header($opt = [])
   $tab_slides = [
     'home' => [
         'slides' => [
-            ['image' => 'Carousel_3.jpg', 'alt' => 'First Slide', 'caption' => ''],
+            ['image' => 'carousel_3.jpg', 'alt' => 'First Slide', 'caption' => ''],
             // ['image' => 'Carousel_3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
         ],
         'pages' => ['index.php']
     ]
   ];
   $default_slides = [
-    ['image' => 'Carousel_2.jpg', 'alt' => 'First Slide', 'caption' => '']
+    ['image' => 'carousel_3.jpg', 'alt' => 'First Slide', 'caption' => '']
   ];
   $current_page = $wh_config['fn'];
   $is_home = ($current_page === 'index.php');
