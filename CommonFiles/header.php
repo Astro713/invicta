@@ -33,6 +33,7 @@ function web_header($opt = [])
   $css_name = strtolower($config['conference']['conferencenameshort']);
   $menu_text = \CMS\MenuTools\draw_menu($wh_config['depth'], $wh_config['fn']);
   $conf_name = ($config['conference']['conferencename']);
+  $conf_location = ($config['conference']['conferencelocation']);
   $conf_brand_top_raw = trim((string)($config['conference']['conf_name_html'] ?? 'Invicta'));
   $conf_brand_bottom_raw = trim((string)($config['conference']['conf_name_html_2'] ?? 'Cane Corso'));
   $conf_brand_top_raw = $conf_brand_top_raw !== '' ? $conf_brand_top_raw : 'Invicta';
@@ -113,7 +114,7 @@ function web_header($opt = [])
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{$page_title} {$conf_name}</title>
+        <title>{$page_title} {$conf_name} || {$conf_location}</title>
         <link rel="icon" type="image/png" href="images/favicon.png">
         <link href="https://fonts.cdnfonts.com/css/placard-next" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/helvetica-now" rel="stylesheet">
