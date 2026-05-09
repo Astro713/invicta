@@ -5,8 +5,21 @@
 }
 
 #IG27-carousel.compact {
-  height: calc(9rem + 26vw);
-  max-height: 32rem;
+  height: calc(7rem + 20vw);
+  max-height: 25rem;
+}
+
+@media (max-width: 991.98px) {
+  #IG27-carousel.compact,
+  #IG27-carousel.compact .carousel-inner,
+  #IG27-carousel.compact .carousel-item {
+    height: calc(8rem + 20vw) !important;
+    max-height: 25rem !important;
+  }
+
+  #IG27-carousel.compact .carousel-item img {
+    object-position: center top;
+  }
 }
 
 #IG27-carousel .carousel-inner {

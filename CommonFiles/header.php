@@ -43,6 +43,7 @@ function web_header($opt = [])
 
   $page_title = $wh_config['page_title'] ? ($wh_config['page_title'] . ' || ') : '';
   $prefix = str_repeat('../', $wh_config['depth']-1);
+  $carousel_css_version = filemtime(__ROOT__ . '/css/carousel.css');
   $h_authbar = '';
   $adHTML = null;
   $tab_slides = [
@@ -55,7 +56,7 @@ function web_header($opt = [])
     ]
   ];
   $default_slides = [
-    ['image' => 'carousel_3.jpg', 'alt' => 'First Slide', 'caption' => '']
+    ['image' => 'carousel_4.1.jpg', 'alt' => 'First Slide', 'caption' => '']
   ];
   $current_page = $wh_config['fn'];
   $is_home = ($current_page === 'index.php');
@@ -125,7 +126,7 @@ function web_header($opt = [])
         <link href="{$prefix}css/cms.css" rel="stylesheet">
         <link href="{$prefix}css/other.css" rel="stylesheet">
         <link href="{$prefix}css/{$css_name}.css" rel="stylesheet" type="text/css">
-        <link href="{$prefix}css/carousel.css" rel="stylesheet" type="text/css">
+        <link href="{$prefix}css/carousel.css?v={$carousel_css_version}" rel="stylesheet" type="text/css">
         <script src="{$prefix}js/jquery-3.6.3.min.js"></script>
         <script src="{$prefix}js/bootstrap.bundle.min.js"></script>
         <script src="{$prefix}js/{$css_name}.js"></script>

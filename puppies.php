@@ -3,9 +3,17 @@
 require_once('CommonFiles/_config.php');
 
 $page_title = "Available Puppies";
+$puppies_video_header_extras = <<<HTML
+        <link rel="preconnect" href="https://player.vimeo.com">
+        <link rel="preconnect" href="https://i.vimeocdn.com">
+        <link rel="preconnect" href="https://f.vimeocdn.com">
+        <link rel="dns-prefetch" href="//player.vimeo.com">
+        <link rel="dns-prefetch" href="//i.vimeocdn.com">
+        <link rel="dns-prefetch" href="//f.vimeocdn.com">
+HTML;
 
 // Start Page Display
-web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>null]);
+web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>$puppies_video_header_extras]);
 
 ?>
 
@@ -20,24 +28,26 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
 
 <div class="alert alert-dark mt-4">Coming soon.</div>
 
+<div class="row justify-content-center mt-4">
+  <div class="col-12 col-md-6 col-lg-5">
+    <p class="text-white text-center mb-3">We are expecting a litter from <a href="dogs.php#azula" class="text-white text-decoration-underline">Invicta's Azula</a> and <a href="dogs.php#ozai" class="text-white text-decoration-underline">Mad River's Ozai</a> near the end of 2026. Stay tuned for updates as we get closer, and follow our social media pages for the latest news, announcements, and puppy updates from Invicta Cane Corso.</p>
+</div>
+</div>
+
 <div class="row justify-content-center mt-5">
   <div class="col-12 col-md-6 col-lg-5">
     <div class="puppies-video-wrapper mx-auto">
       <iframe
         title="Invicta Cane Corso video"
-        src="https://player.vimeo.com/video/1190604186?h=e6bae92994&background=1&autoplay=1&loop=1&muted=1&playsinline=1"
+        src="https://player.vimeo.com/video/1190604186?h=e6bae92994&background=1&autoplay=1&loop=1&muted=1&playsinline=1&dnt=1"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        loading="eager"
+        fetchpriority="high"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen>
       </iframe>
     </div>
   </div>
-</div>
-
-<div class="row justify-content-center mt-5">
-  <div class="col-12 col-md-6 col-lg-5">
-    <p class="text-white text-center mb-3">We are expecting a litter from <a href="dogs.php#azula" class="text-white text-decoration-underline">Invicta's Azula</a> and <a href="dogs.php#ozai" class="text-white text-decoration-underline">Mad River's Ozai</a> near the end of 2026. Stay tuned for updates as we get closer, and follow our social media pages for the latest news, announcements, and puppy updates from Invicta Cane Corso.</p>
-</div>
 </div>
 
 <?php
