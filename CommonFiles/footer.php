@@ -66,6 +66,7 @@ function web_footer($opt = [])
                   <ul class="list-unstyled ">
                       <li class="py-1"><a href="index.php">Home</a></li>
                       <li class="py-1"><a href="about.php">About Us</a></li>
+                      <li class="py-1"><a href="puppies.php">Available Puppies</a></li>
                   </ul>
               </div>
               <div class="col">

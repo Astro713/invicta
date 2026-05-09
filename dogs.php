@@ -45,6 +45,7 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
 </div>
 
 <hr class="mt-5 mb-5" style="border-color: transparent;">
+<hr class="mt-5 mb-5" style="border-color: transparent;">
 
 <div class="row justify-content-center mt-5 mb-5">
     <div class="col-md-6 text-center">

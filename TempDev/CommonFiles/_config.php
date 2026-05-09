@@ -78,8 +78,8 @@ require_once('_config_menu.php');
 require_once('menu_tools.php');
 require_once('header.php');
 require_once('footer.php');
-require_once('tools.php');
-require_once('util.php');
+require_once('Tools.php');
+require_once('Util.php');
 require_once('meeting_tools.php');
 
 $utc_tz = new DateTimeZone('UTC');

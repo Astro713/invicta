@@ -33,6 +33,7 @@ function web_header($opt = [])
   $css_name = strtolower($config['conference']['conferencenameshort']);
   $menu_text = \CMS\MenuTools\draw_menu($wh_config['depth'], $wh_config['fn']);
   $conf_name = ($config['conference']['conferencename']);
+  $conf_location = ($config['conference']['conferencelocation']);
   $conf_brand_top_raw = trim((string)($config['conference']['conf_name_html'] ?? 'Invicta'));
   $conf_brand_bottom_raw = trim((string)($config['conference']['conf_name_html_2'] ?? 'Cane Corso'));
   $conf_brand_top_raw = $conf_brand_top_raw !== '' ? $conf_brand_top_raw : 'Invicta';
@@ -43,6 +44,7 @@ function web_header($opt = [])
 
   $page_title = $wh_config['page_title'] ? ($wh_config['page_title'] . ' || ') : '';
   $prefix = str_repeat('../', $wh_config['depth']-1);
+  $carousel_css_version = filemtime(__ROOT__ . '/css/carousel.css');
   $h_authbar = '';
   $adHTML = null;
   $tab_slides = [
@@ -55,7 +57,7 @@ function web_header($opt = [])
     ]
   ];
   $default_slides = [
-    ['image' => 'carousel_3.jpg', 'alt' => 'First Slide', 'caption' => '']
+    ['image' => 'carousel_4.1.jpg', 'alt' => 'First Slide', 'caption' => '']
   ];
   $current_page = $wh_config['fn'];
   $is_home = ($current_page === 'index.php');
@@ -112,7 +114,7 @@ function web_header($opt = [])
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{$page_title} {$conf_name}</title>
+        <title>{$page_title} {$conf_name} || {$conf_location}</title>
         <link rel="icon" type="image/png" href="images/favicon.png">
         <link href="https://fonts.cdnfonts.com/css/placard-next" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/helvetica-now" rel="stylesheet">
@@ -125,7 +127,7 @@ function web_header($opt = [])
         <link href="{$prefix}css/cms.css" rel="stylesheet">
         <link href="{$prefix}css/other.css" rel="stylesheet">
         <link href="{$prefix}css/{$css_name}.css" rel="stylesheet" type="text/css">
-        <link href="{$prefix}css/carousel.css" rel="stylesheet" type="text/css">
+        <link href="{$prefix}css/carousel.css?v={$carousel_css_version}" rel="stylesheet" type="text/css">
         <script src="{$prefix}js/jquery-3.6.3.min.js"></script>
         <script src="{$prefix}js/bootstrap.bundle.min.js"></script>
         <script src="{$prefix}js/{$css_name}.js"></script>

@@ -39,19 +39,17 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
 
 <div class="container mt-5">
 
-
-<p class="ig-index-font-h1 mb-3 text-center">Welcome to Invicta Cane Corso</p>
-
 <div class="row home-mobile-flow align-items-center mb-5 mt-4">
-    <div class="home-intro-panel col-md-6 mt-4">
+    <div class="home-intro-panel col-md-7 mt-4">
         <div class="home-intro-copy">
+            <p class="ig-index-font-h1 mb-4 text-center">Welcome to Invicta Cane Corso</p>
             <p class="text-center text-light">Invicta Cane Corso is dedicated to raising true, well-balanced Cane Corsos with the strength, temperament, and presence that define the breed. Built on carefully selected European and American bloodlines, our program focuses on thoughtful pairings, hands-on care, and placing each puppy with a responsible home prepared for the loyalty, power, and purpose of a true Cane Corso.</p>
             <div class="text-center mt-4 mb-4">
                 <a href="about.php" class="btn btn-outline-secondary text-white border-secondary">More About Us</a>
             </div>
         </div>
     </div>
-    <div class="home-tiktok-panel col-md-6 mt-4">
+    <div class="home-tiktok-panel col-md-5 mt-4">
         <div class="home-tiktok-embed">
             <iframe
                 class="tiktok-player"
@@ -83,7 +81,7 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
     <div class="container p-5">
         <div class="row align-items-center">
             <div class="col-md-6 mt-3">
-                <img src="images/invictas_ozai.jpg" class="img-fluid mx-auto d-block" style="max-height: 375px; width: auto;">
+                <img src="images/invictas_ozai.jpg" class="img-fluid mx-auto d-block" style="max-width: 325px; height: auto;">
             </div>
             <div class="col-md-6 mt-3">
                 <p class="ig-index-font-h2 text-center mb-3">Upcoming Litter</p>
@@ -91,6 +89,7 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
                 <div class="social-media text-center mt-4 mb-4">
                     <a target="_blank" rel="noopener" href="https://www.tiktok.com/@azulathecanecorso" class="text-white mx-2" aria-label="Invicta Cane Corso on TikTok"><i class="bi bi-tiktok fs-custom"></i></a>
                     <a target="_blank" rel="noopener" href="https://www.instagram.com/azulathecanecorso/" class="text-white mx-2" aria-label="Invicta Cane Corso on Instagram"><i class="bi bi-instagram fs-custom"></i></a>
+                    <a href="mailto:info@invictacanecorso.com" class="text-white mx-2" aria-label="Email Invicta Cane Corso"><i class="bi bi-envelope fs-custom"></i></a>
                 </div>
                 <div class="text-center mt-4 mb-4">
                     <a href="puppies.php" class="btn btn-outline-secondary text-white border-secondary">Available Puppies</a>
