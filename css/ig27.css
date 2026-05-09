@@ -188,7 +188,7 @@
 .invicta-wordmark-line {
   display: block;
   font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
-  font-size: clamp(0.9rem, .95vw, 1.15rem);
+  font-size: clamp(0.8rem, .85vw, 1.05rem);
   font-weight: 600;
   line-height: 1;
   letter-spacing: 0.12em;
@@ -201,9 +201,9 @@
 }
 
 .invicta-wordmark-line-bottom {
-  font-size: clamp(0.53rem, 0.57vw, 0.72rem);
+  font-size: clamp(0.43rem, 0.47vw, 0.63rem);
   letter-spacing: 0.14em;
-  margin-top: 4.5px;
+  margin-top: 4px;
 }
 
 .invicta-wordmark-mark {
@@ -215,10 +215,10 @@
 
 .invicta-wordmark-mark img {
   display: block;
-  width: clamp(30px, 2.3vw, 45px);
-  height: clamp(30px, 2.3vw, 45px);
+  width: clamp(31.5px, 2.4vw, 46.5px);
+  height: clamp(31.5px, 2.4vw, 46.5px);
   object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.99));
 }
 
 .navbar-custom-color .dropdown-menu a {
@@ -232,16 +232,16 @@
   }
 
   .invicta-wordmark-line {
-    font-size: 0.72rem;
+    font-size: 0.65rem;
   }
 
   .invicta-wordmark-line-bottom {
-    font-size: 0.52rem;
+    font-size: 0.40rem;
   }
 
   .invicta-wordmark-mark img {
-    width: 16px;
-    height: 16px;
+    width: 25px;
+    height: 25px;
   }
 }
 
