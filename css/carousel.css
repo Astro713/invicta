@@ -1,12 +1,12 @@
 #IG27-carousel {
-  height: calc(15rem + 40vw);
+  height: calc(37rem + 47.5vw);
   max-height: 50rem;
   border-bottom: 2px solid #000000;
 }
 
 #IG27-carousel.compact {
-  height: calc(7rem + 20vw);
-  max-height: 25rem;
+  height: calc(13rem + 27vw);
+  max-height: 32em;
 }
 
 @media (max-width: 991.98px) {
