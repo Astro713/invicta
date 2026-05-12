@@ -54,13 +54,7 @@ function web_header($opt = [])
             // ['image' => 'Carousel_5.jpg', 'alt' => 'Second Slide', 'caption' => ''],
         ],
         'pages' => ['index.php']
-    ],
-    'about' => [
-            'slides' => [
-                ['image' => 'carousel_3.jpg', 'alt' => 'First Slide']
-            ],
-            'pages' => ['about.php']
-    ],
+    ]
 
   ];
   $default_slides = [
