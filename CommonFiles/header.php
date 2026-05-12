@@ -51,10 +51,17 @@ function web_header($opt = [])
     'home' => [
         'slides' => [
             ['image' => 'carousel_3.jpg', 'alt' => 'First Slide', 'caption' => ''],
-            // ['image' => 'Carousel_3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
+            // ['image' => 'Carousel_5.jpg', 'alt' => 'Second Slide', 'caption' => ''],
         ],
         'pages' => ['index.php']
-    ]
+    ],
+    'about' => [
+            'slides' => [
+                ['image' => 'Carousel_5.1.jpg', 'alt' => 'First Slide']
+            ],
+            'pages' => ['about.php']
+    ],
+
   ];
   $default_slides = [
     ['image' => 'carousel_4.1.jpg', 'alt' => 'First Slide', 'caption' => '']

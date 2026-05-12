@@ -81,7 +81,7 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
     <div class="container p-5">
         <div class="row align-items-center">
             <div class="col-md-6 mt-3">
-                <img src="images/invictas_ozai.jpg" class="img-fluid mx-auto d-block" style="max-height: 400px; width: auto;">
+                <img src="images/invictas_ozai.jpg" class="img-fluid mx-auto d-block" style="max-height: 425px; width: auto;">
             </div>
             <div class="col-md-6 mt-3">
                 <p class="ig-index-font-h2 text-center mb-3">Upcoming Litter</p>

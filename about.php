@@ -9,30 +9,27 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
 
 ?>
 
-<div class="row mt-5 align-items-center">
+<div class="row mt-5">
   <div class="col-12">
     <h2><?= $page_title ?></h2>
+    <hr>
   </div>
-
-<?php
-  if (true)
-  {
-?>
-
-<div class="col-md-6 mt-5">
-<img src="images/invicta_azula_3.jpg" alt="" class="img-fluid w-100" style="aspect-ratio: 1 / 1; object-fit: cover;">
-</div>
-
-<div class="col-md-6 mt-5">
-<p class="text-start text-light">Invicta Cane Corso was established in the countryside of Hempstead, Texas, where Alexis and Brenda welcomed their first Cane Corso, Azula, in 2024. After falling in love with the breed's loyalty, confidence, strength, and natural protective instincts, they expanded their family in 2025 with Ozai after moving to Cypress, Texas. With Azula's strong European bloodline and Ozai's powerful American lineage, they founded Invicta Cane Corso with a commitment to raising well-tempered, confident puppies backed by exceptional AKC pedigree and placing them in loving, responsible homes.</p>
 </div>
 
 
+<div class="row mt-5 text-center justify-content-center">
+  <div class="col-md-6 ">
+    <img src="images/invicta_azula_3.jpg" alt="" class="img-fluid mx-auto d-block" style="max-height: 450px; width: auto;">
+  </div>
+</div>
 
-<?php
-  }
-?>
-</div><!--/row-->
+
+<div class="row mt-5 justify-content-center">
+  <div class="col-md-6 ">
+    <p class="text-center text-light">Invicta Cane Corso was established in the countryside of Hempstead, Texas, where Alexis and Brenda welcomed their first Cane Corso, Azula, in 2024. After falling in love with the breed's loyalty, confidence, strength, and natural protective instincts, they expanded their family in 2025 with Ozai after moving to Cypress, Texas. With Azula's strong European bloodline and Ozai's powerful American lineage, they founded Invicta Cane Corso with a commitment to raising well-tempered, confident puppies backed by exceptional AKC pedigree and placing them in loving, responsible homes.</p>
+  </div>
+</div>
+
 
 <?php
 // End Page Display
