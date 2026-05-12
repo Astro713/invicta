@@ -57,7 +57,7 @@ function web_header($opt = [])
     ],
     'about' => [
             'slides' => [
-                ['image' => 'Carousel_5.1.jpg', 'alt' => 'First Slide']
+                ['image' => 'carousel_3.jpg', 'alt' => 'First Slide']
             ],
             'pages' => ['about.php']
     ],
