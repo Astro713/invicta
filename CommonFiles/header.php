@@ -162,13 +162,15 @@ function web_header($opt = [])
         <!-- HEADER -->
         <div id="IG27-carousel" class="carousel slide carousel-fade{$carousel_class}" data-bs-ride="carousel">
             <div class="carousel-logo">
-                <a href="{$prefix}index.php">
-                    <img src="{$prefix}images/invicta_logo_master_1.png" alt="Invicta Logo" class="img-fluid">
-                </a>
-                <div class="carousel-brand-title" aria-label="Invicta Cane Corso">
-                    <span></span>
-                    <strong>Invicta Cane Corso</strong>
-                    <span></span>
+                <div class="carousel-brand-panel" aria-label="{$conf_brand_label}">
+                    <span class="carousel-vertical-title" aria-hidden="true">{$conf_brand_top}</span>
+                    <a class="carousel-crest-link" href="{$prefix}index.php" aria-label="{$conf_brand_label} home">
+                        <img src="{$prefix}images/invicta_logo_master.png" alt="">
+                    </a>
+                    <div class="carousel-brand-copy">
+                        <strong>{$conf_brand_top}</strong>
+                        <small>{$conf_brand_bottom}</small>
+                    </div>
                 </div>
             </div>
             <!-- <div class="carousel-logos-right">

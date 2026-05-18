@@ -1,4 +1,8 @@
 #IG27-carousel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: 0 0 auto;
   height: calc(30rem + 40vw);
   max-height: 45rem;
   border-bottom: 2px solid #000000;
@@ -7,6 +11,27 @@
 #IG27-carousel.compact {
   height: calc(20rem + 25vw);
   max-height: 30em;
+}
+
+#IG27-carousel:not(.compact)::before,
+#IG27-carousel:not(.compact)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#IG27-carousel:not(.compact)::before {
+  background:
+    radial-gradient(ellipse at 60% 50%, transparent 0%, transparent 42%, rgba(0, 0, 0, 0.19) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.24) 34%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0.2) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, transparent 42%, rgba(0, 0, 0, 0.32) 100%);
+}
+
+#IG27-carousel:not(.compact)::after {
+  opacity: 0.29;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.44));
 }
 
 @media (max-width: 767.98px) {
@@ -30,6 +55,8 @@
 }
 
 #IG27-carousel .carousel-inner {
+  position: relative;
+  z-index: 0;
   height: 100%;
 }
 
@@ -50,89 +77,209 @@
   object-fit: cover;
 }
 
+#IG27-carousel:not(.compact) .carousel-item img {
+  transform: scale(1.02);
+  transform-origin: 72% 52%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #IG27-carousel:not(.compact) .carousel-item.active img {
+    animation: invictaHeroDrift 18s ease-out both;
+  }
+}
+
+@keyframes invictaHeroDrift {
+  from {
+    transform: scale(1.02) translateX(-1%);
+  }
+
+  to {
+    transform: scale(1.08) translateX(1.2%);
+  }
+}
+
 .carousel-logo {
   position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
+  top: 52%;
+  left: clamp(1.5rem, 8vw, 7rem);
+  transform: translateY(-42%);
+  z-index: 3;
+  width: min(610px, calc(100vw - 3rem));
+  pointer-events: none;
 }
 
-.carousel-logo img {
-  height: auto;
-  width: 20vw;
-  max-width: 250px;
-  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.99));
+#IG27-carousel:not(.compact) .carousel-logo {
+  width: min(620px, calc(100vw - 3rem));
 }
 
-.carousel-brand-title {
+.carousel-brand-panel {
+  display: grid;
+  grid-template-columns: 34px auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 32px);
+  pointer-events: auto;
+}
+
+.carousel-vertical-title {
+  position: relative;
+  align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 1.2vw, 18px);
-  margin-top: clamp(8px, 1vw, 14px);
-  color: #ffffff;
+  color: #c6a15b;
   font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
-  font-size: clamp(15px, 1.7vw, 25px);
-  font-weight: 650;
+  font-size: clamp(0.66rem, 0.9vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0.24em;
   line-height: 1;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
-  white-space: nowrap;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.95);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 
-.carousel-brand-title span {
+.carousel-vertical-title::before,
+.carousel-vertical-title::after {
+  content: '';
   display: block;
-  width: clamp(38px, 5.5vw, 84px);
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95));
+  width: 1px;
+  height: clamp(42px, 6vw, 76px);
+  margin: 12px 0;
+  background: linear-gradient(180deg, transparent, rgba(198, 161, 91, 0.9), transparent);
 }
 
-.carousel-brand-title span:last-child {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), transparent);
+.carousel-crest-link {
+  display: block;
+  width: clamp(92px, 9.5vw, 136px);
+  text-decoration: none;
 }
 
-.carousel-brand-title strong {
-  font: inherit;
+.carousel-crest-link img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  opacity: 1;
+  filter:
+    drop-shadow(0 18px 34px rgba(0, 0, 0, 0.72))
+    drop-shadow(0 0 12px rgba(198, 161, 91, 0.18));
 }
 
-#IG27-carousel.compact .carousel-logo img {
-  width: 17.5vw;
-  max-width: 225px;
+.carousel-brand-copy {
+  position: relative;
+  min-width: 0;
+  padding-left: clamp(16px, 2vw, 28px);
+  border-left: 1px solid rgba(198, 161, 91, 0.7);
+}
+
+.carousel-brand-copy::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+  left: clamp(16px, 2vw, 28px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(198, 161, 91, 0.82), transparent);
+}
+
+.carousel-brand-copy strong,
+.carousel-brand-copy small {
+  display: block;
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  line-height: 1;
+}
+
+.carousel-brand-copy strong {
+  color: #fbf6ea;
+  font-size: clamp(3rem, 5vw, 5.05rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 0.96;
+  text-shadow:
+    0 1px 0 rgba(205, 179, 122, 0.36),
+    0 8px 22px rgba(0, 0, 0, 0.82);
+}
+
+.carousel-brand-copy small {
+  margin-top: 6px;
+  color: #cdb37a;
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-shadow: 0 7px 20px rgba(0, 0, 0, 0.9);
+}
+
+#IG27-carousel.compact .carousel-logo {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(520px, 92vw);
+}
+
+#IG27-carousel.compact .carousel-brand-panel {
+  grid-template-columns: auto minmax(0, auto);
+  justify-content: center;
+}
+
+#IG27-carousel.compact .carousel-vertical-title {
+  display: none;
+}
+
+#IG27-carousel.compact .carousel-crest-link {
+  width: clamp(78px, 8.5vw, 108px);
+}
+
+#IG27-carousel.compact .carousel-brand-copy strong {
+  font-size: clamp(2.1rem, 4.4vw, 3.8rem);
+}
+
+#IG27-carousel.compact .carousel-brand-copy small {
+  font-size: clamp(0.75rem, 1.25vw, 1.05rem);
 }
 
 @media (max-width: 768px) {
+  #IG27-carousel:not(.compact) .carousel-logo,
   .carousel-logo {
-    top: 65%;
+    top: 59%;
     left: 50%;
+    width: min(360px, 94vw);
     transform: translate(-50%, -50%);
   }
 
-  .carousel-logo img {
-    width: 17.5vw;
-    max-width: 125px;
-    height: auto;
+  .carousel-brand-panel {
+    grid-template-columns: auto minmax(0, auto);
+    justify-content: center;
+    gap: 12px;
   }
 
-  .carousel-brand-title {
-    gap: 8px;
-    margin-top: 6px;
-    font-size: clamp(7.5px, 1.25vw, 17.5px);
+  .carousel-vertical-title {
+    display: none;
+  }
+
+  .carousel-crest-link {
+    width: clamp(58px, 16vw, 76px);
+  }
+
+  .carousel-brand-copy {
+    padding-left: 12px;
+  }
+
+  .carousel-brand-copy strong {
+    font-size: clamp(2rem, 8.6vw, 2.75rem);
+  }
+
+  .carousel-brand-copy small {
+    margin-top: 5px;
+    font-size: clamp(0.65rem, 3.2vw, 0.92rem);
     letter-spacing: 0.05em;
   }
 
-  .carousel-brand-title span {
-    width: clamp(18px, 7vw, 38px);
-    height: 1px;
-  }
-
-  #IG27-carousel.compact .carousel-logo img {
-    width: 17.5vw;
-    max-width: 125px;
+  .carousel-brand-copy::after {
+    bottom: -10px;
+    left: 12px;
   }
 }
+
 .carousel-logos-right {
   position: absolute;
   top: 40px;
@@ -179,7 +326,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.25) 100%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.13) 75%, rgba(0, 0, 0, 0.21) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -191,7 +338,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.07);
+  background: rgba(0, 0, 0, 0.06);
   z-index: 1;
   opacity: 1;
   transition: opacity .75s ease-in;
@@ -301,16 +448,48 @@
   animation: slideInLeft 1s ease-out 0.2s forwards;
 }
 
-#IG27-carousel:not(.initialized) .carousel-logo .carousel-brand-title {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideIn 1s ease-out 0.45s forwards;
-}
-
 @keyframes slideInLeft {
   from {
     opacity: 0;
     transform: translate(-50%, -50%) translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#IG27-carousel:not(.initialized):not(.compact) .carousel-logo {
+  opacity: 1;
+  transform: translateY(-42%);
+  animation: none;
+}
+
+@keyframes invictaHomeBrandEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-42%) translateX(-38px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-42%) translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  #IG27-carousel:not(.initialized):not(.compact) .carousel-logo {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    animation: none;
+  }
+}
+
+@keyframes invictaHomeBrandEnterMobile {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateX(-28px);
   }
 
   to {
