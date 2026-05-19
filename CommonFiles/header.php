@@ -140,13 +140,8 @@ function web_header($opt = [])
        <nav class="navbar navbar-expand-lg navbar-custom-color fixed-top">
               <div class="container-fluid">
     
-                <a class="navbar-brand invicta-wordmark" href="{$config['web']['confurl']}" aria-label="{$conf_brand_label}">
-                  <strong class="invicta-wordmark-line invicta-wordmark-line-top">{$conf_brand_top}</strong>
-                  <span class="invicta-wordmark-mark" aria-hidden="true">
-                    <img src="{$prefix}images/favicon_2.png" alt="">
-                  </span>
-                  <!-- <span class="invicta-wordmark-divider" aria-hidden="true">-&gt;&gt;&gt;&gt; . &lt;&lt;&lt;&lt;-</span> -->
-                  <span class="invicta-wordmark-line invicta-wordmark-line-bottom">{$conf_brand_bottom}</span>
+                <a class="navbar-brand invicta-wordmark me-0 mt-2" href="{$config['web']['confurl']}" aria-label="{$conf_brand_label}">
+                  <img src="{$prefix}images/invicta_wordmark_nav.png" alt="" class="invicta-wordmark-image">
                 </a>
     
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

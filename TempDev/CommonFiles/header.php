@@ -51,10 +51,11 @@ function web_header($opt = [])
     'home' => [
         'slides' => [
             ['image' => 'carousel_3.jpg', 'alt' => 'First Slide', 'caption' => ''],
-            // ['image' => 'Carousel_3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
+            // ['image' => 'Carousel_5.jpg', 'alt' => 'Second Slide', 'caption' => ''],
         ],
         'pages' => ['index.php']
     ]
+
   ];
   $default_slides = [
     ['image' => 'carousel_4.1.jpg', 'alt' => 'First Slide', 'caption' => '']
@@ -115,7 +116,7 @@ function web_header($opt = [])
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{$page_title} {$conf_name} || {$conf_location}</title>
-        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="icon" type="image/png" href="images/favicon_3.png">
         <link href="https://fonts.cdnfonts.com/css/placard-next" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/helvetica-now" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -140,12 +141,7 @@ function web_header($opt = [])
               <div class="container-fluid">
     
                 <a class="navbar-brand invicta-wordmark" href="{$config['web']['confurl']}" aria-label="{$conf_brand_label}">
-                  <strong class="invicta-wordmark-line invicta-wordmark-line-top">{$conf_brand_top}</strong>
-                  <span class="invicta-wordmark-mark" aria-hidden="true">
-                    <img src="{$prefix}images/favicon.png" alt="">
-                  </span>
-                  <!-- <span class="invicta-wordmark-divider" aria-hidden="true">-&gt;&gt;&gt;&gt; . &lt;&lt;&lt;&lt;-</span> -->
-                  <span class="invicta-wordmark-line invicta-wordmark-line-bottom">{$conf_brand_bottom}</span>
+                  <img src="{$prefix}images/invicta_wordmark_nav.png" alt="" class="invicta-wordmark-image">
                 </a>
     
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -161,13 +157,15 @@ function web_header($opt = [])
         <!-- HEADER -->
         <div id="IG27-carousel" class="carousel slide carousel-fade{$carousel_class}" data-bs-ride="carousel">
             <div class="carousel-logo">
-                <a href="{$prefix}index.php">
-                    <img src="{$prefix}images/invicta_logo.png" alt="Invicta Logo" class="img-fluid">
-                </a>
-                <div class="carousel-brand-title" aria-label="Invicta Cane Corso">
-                    <span></span>
-                    <strong>Invicta Cane Corso</strong>
-                    <span></span>
+                <div class="carousel-brand-panel" aria-label="{$conf_brand_label}">
+                    <span class="carousel-vertical-title" aria-hidden="true">{$conf_brand_top}</span>
+                    <a class="carousel-crest-link" href="{$prefix}index.php" aria-label="{$conf_brand_label} home">
+                        <img src="{$prefix}images/invicta_logo_master.png" alt="">
+                    </a>
+                    <div class="carousel-brand-copy">
+                        <strong>{$conf_brand_top}</strong>
+                        <small>{$conf_brand_bottom}</small>
+                    </div>
                 </div>
             </div>
             <!-- <div class="carousel-logos-right">

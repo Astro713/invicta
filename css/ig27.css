@@ -185,6 +185,14 @@
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
 }
 
+.invicta-wordmark-image {
+  display: block;
+  width: clamp(130px, 9vw, 170px);
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.72));
+}
+
 .invicta-wordmark-line {
   display: block;
   font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
@@ -204,6 +212,80 @@
   font-size: clamp(0.43rem, 0.47vw, 0.63rem);
   letter-spacing: 0.14em;
   margin-top: 4px;
+}
+
+.invicta-wordmark-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.18em;
+  width: 100%;
+  margin: 2px 0 1px;
+  color: #cf9e73;
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  font-size: clamp(0.48rem, 0.52vw, 0.66rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  text-shadow:
+    0 1px 0 rgba(255, 244, 210, 0.35),
+    0 0 7px rgba(207, 158, 115, 0.38),
+    0 2px 7px rgba(0, 0, 0, 0.86);
+  white-space: nowrap;
+}
+
+.invicta-wordmark-divider::before,
+.invicta-wordmark-divider::after {
+  content: '';
+  flex: 1 1 16px;
+  max-width: 24px;
+  height: 1px;
+  margin: 0 0.22em;
+  transform: translateY(-0.08em);
+  background: linear-gradient(90deg, transparent, rgba(207, 158, 115, 0.9), rgba(246, 214, 177, 0.94));
+  box-shadow:
+    0 -1px 0 rgba(255, 246, 214, 0.14),
+    0 0 4px rgba(207, 158, 115, 0.3);
+}
+
+.invicta-wordmark-divider::after {
+  background: linear-gradient(90deg, rgba(246, 214, 177, 0.94), rgba(207, 158, 115, 0.9), transparent);
+}
+
+.invicta-divider-bolts {
+  display: inline-block;
+  color: #e0b78f;
+  font: inherit;
+  font-size: 1.08em;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  line-height: 0.92;
+  -webkit-text-stroke: 0.18px rgba(255, 243, 202, 0.5);
+  text-shadow:
+    0 1px 0 rgba(255, 246, 214, 0.34),
+    0 0 6px rgba(207, 158, 115, 0.3),
+    0 2px 7px rgba(0, 0, 0, 0.9);
+}
+
+.invicta-divider-bolts-left {
+  transform: scaleX(0.96) scaleY(1.16) skewX(-7deg);
+  transform-origin: right center;
+}
+
+.invicta-divider-bolts-right {
+  transform: scaleX(0.96) scaleY(1.16) skewX(7deg);
+  transform-origin: left center;
+}
+
+.invicta-divider-center {
+  color: #f6d6b1;
+  font: inherit;
+  font-size: 1.1em;
+  line-height: 0.8;
+  text-shadow:
+    0 0 7px rgba(207, 158, 115, 0.6),
+    0 2px 7px rgba(0, 0, 0, 0.82);
 }
 
 .invicta-wordmark-mark {
@@ -231,12 +313,29 @@
     margin-right: 0.75rem;
   }
 
+  .invicta-wordmark-image {
+    width: 124px;
+  }
+
   .invicta-wordmark-line {
     font-size: 0.65rem;
   }
 
   .invicta-wordmark-line-bottom {
     font-size: 0.40rem;
+  }
+
+  .invicta-wordmark-divider {
+    font-size: 0.36rem;
+    gap: 0.14em;
+  }
+
+  .invicta-wordmark-divider::before,
+  .invicta-wordmark-divider::after {
+    flex-basis: 10px;
+    max-width: 14px;
+    margin: 0 0.16em;
+    transform: translateY(-0.06em);
   }
 
   .invicta-wordmark-mark img {
@@ -302,6 +401,10 @@ body {
 
 .ig-secondary-text {
   color: #322070;
+}
+
+.invicta-rg-text {
+  color: #cf9e73 !important;
 }
 
 .ig-index-font-h1 {
