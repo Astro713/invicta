@@ -19,7 +19,7 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
 
 <div class="row mt-5 text-center justify-content-center">
   <div class="col-md-6 ">
-    <img src="images/invicta_azula_3.jpg" alt="" class="img-fluid mx-auto d-block" style="max-height: 450px; width: auto;">
+    <img src="images/invictas_azula.jpg" alt="" class="img-fluid mx-auto d-block" style="max-height: 450px; width: auto;">
   </div>
 </div>
 

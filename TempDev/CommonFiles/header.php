@@ -140,7 +140,7 @@ function web_header($opt = [])
        <nav class="navbar navbar-expand-lg navbar-custom-color fixed-top">
               <div class="container-fluid">
     
-                <a class="navbar-brand invicta-wordmark" href="{$config['web']['confurl']}" aria-label="{$conf_brand_label}">
+                <a class="navbar-brand invicta-wordmark me-0 mt-2" href="{$config['web']['confurl']}" aria-label="{$conf_brand_label}">
                   <img src="{$prefix}images/invicta_wordmark_nav.png" alt="" class="invicta-wordmark-image">
                 </a>
     

@@ -60,13 +60,14 @@ function web_footer($opt = [])
               <div class="col-6 col-lg-4">
                   <h5 class="mt-3 mb-1">{$config['conference']['conferencename']}</h5>
                   <p>Location: {$config['conference']['conferencelocation']}</p>
-                  <p>Registration: AKC Registered</p>
+                  <p>Registration: American Kennel Club (AKC)</p>
               </div>
               <div class="col">
                   <h6 class="mt-3 mb-1">Menu</h6>
                   <ul class="list-unstyled ">
                       <li class="py-1"><a href="index.php">Home</a></li>
                       <li class="py-1"><a href="about.php">About Us</a></li>
+                      <li class="py-1"><a href="puppies.php">Available Puppies</a></li>
                   </ul>
               </div>
               <div class="col">

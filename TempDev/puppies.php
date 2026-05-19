@@ -46,7 +46,7 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
 
 <div class="row justify-content-center mt-5">
   <div class="col-12 col-md-6 col-lg-5">
-    <p class="text-white text-center mb-3">We are expecting a litter from <a href="dogs.php#azula" class="text-white text-decoration-underline">Invicta's Azula</a> and <a href="dogs.php#ozai" class="text-white text-decoration-underline">Mad River's Ozai</a> near the end of 2026. Stay tuned for updates as we get closer, and follow our social media pages for the latest news, announcements, and puppy updates from Invicta Cane Corso.</p>
+    <p class="text-white text-center mb-3">We are expecting a litter from <a href="dogs.php#azula" class="text-decoration-underline">Invicta's Azula</a> and <a href="dogs.php#ozai" class="text-decoration-underline">Mad River's Ozai</a> near the end of 2026. Stay tuned for updates as we get closer, and follow our social media pages for the latest news, announcements, and puppy updates from Invicta Cane Corso.</p>
     <div class="social-media text-center mt-3 mb-3">
         <a target="_blank" rel="noopener" href="https://www.tiktok.com/@azulathecanecorso" class="text-white mx-2" aria-label="Invicta Cane Corso on TikTok"><i class="bi bi-tiktok fs-custom"></i></a>
         <a target="_blank" rel="noopener" href="https://www.instagram.com/azulathecanecorso/" class="text-white mx-2" aria-label="Invicta Cane Corso on Instagram"><i class="bi bi-instagram fs-custom"></i></a>
