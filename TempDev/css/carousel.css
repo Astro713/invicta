@@ -473,28 +473,28 @@
 }
 
 #IG27-carousel:not(.initialized):not(.compact) .carousel-logo {
-  opacity: 1;
-  transform: translateY(-42%) scale(1.1);
-  animation: none;
+  opacity: 0;
+  transform: translateY(-42%) translateX(-38px) scale(1.1);
+  animation: invictaHomeBrandEnter 1s ease-out 0.2s forwards;
 }
 
 @keyframes invictaHomeBrandEnter {
   from {
     opacity: 0;
-    transform: translateY(-42%) translateX(-38px);
+    transform: translateY(-42%) translateX(-38px) scale(1.1);
   }
 
   to {
     opacity: 1;
-    transform: translateY(-42%) translateX(0);
+    transform: translateY(-42%) translateX(0) scale(1.1);
   }
 }
 
 @media (max-width: 768px) {
   #IG27-carousel:not(.initialized):not(.compact) .carousel-logo {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-    animation: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) translateX(-28px);
+    animation: invictaHomeBrandEnterMobile 1s ease-out 0.2s forwards;
   }
 
   #IG27-carousel:not(.initialized).compact .carousel-logo {
