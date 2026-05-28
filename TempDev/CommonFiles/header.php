@@ -44,6 +44,7 @@ function web_header($opt = [])
 
   $page_title = $wh_config['page_title'] ? ($wh_config['page_title'] . ' || ') : '';
   $prefix = str_repeat('../', $wh_config['depth']-1);
+  $site_css_version = filemtime(__ROOT__ . "/css/{$css_name}.css");
   $carousel_css_version = filemtime(__ROOT__ . '/css/carousel.css');
   $h_authbar = '';
   $adHTML = null;
@@ -127,7 +128,7 @@ function web_header($opt = [])
         <link href="{$prefix}css/bootstrap-icons.css" rel="stylesheet">
         <link href="{$prefix}css/cms.css" rel="stylesheet">
         <link href="{$prefix}css/other.css" rel="stylesheet">
-        <link href="{$prefix}css/{$css_name}.css" rel="stylesheet" type="text/css">
+        <link href="{$prefix}css/{$css_name}.css?v={$site_css_version}" rel="stylesheet" type="text/css">
         <link href="{$prefix}css/carousel.css?v={$carousel_css_version}" rel="stylesheet" type="text/css">
         <script src="{$prefix}js/jquery-3.6.3.min.js"></script>
         <script src="{$prefix}js/bootstrap.bundle.min.js"></script>
