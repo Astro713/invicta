@@ -81,18 +81,18 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'title'=>nu
     <div class="container p-5">
         <div class="row align-items-center">
             <div class="col-md-6 mt-3">
-                <img src="images/invictas_ozai.jpg" class="img-fluid mx-auto d-block" style="max-height: 425px; width: auto;">
+                <img src="images/invictas_ozai.jpg" class="img-fluid mx-auto d-block rounded-3 shadow-lg" style="max-height: 425px; width: auto;">
             </div>
             <div class="col-md-6 mt-3">
                 <p class="ig-index-font-h2 text-center mb-3">Upcoming Litter</p>
-                <p class="text-white text-center mb-3">We are expecting a litter from <a href="dogs.php#azula" class=" text-decoration-underline">Invicta's Azula</a> and <a href="dogs.php#ozai" class=" text-decoration-underline">Mad River's Ozai</a> near the end of 2026. Stay tuned for updates as we get closer, and follow our social media pages for the latest news, announcements, and puppy updates from Invicta Cane Corso.</p>
+                <p class="text-white text-center mb-3">We are expecting a litter from <a href="dogs.php#azula" class=" text-decoration-underline">Invicta's Azula</a> and <a href="dogs.php#ozai" class=" text-decoration-underline">Mad River's Ozai</a> near the beginning of 2027. Stay tuned for updates as we get closer, and follow our social media pages for the latest news, announcements, and puppy updates from Invicta Cane Corso.</p>
                 <div class="social-media text-center mt-4 mb-4">
                     <a target="_blank" rel="noopener" href="https://www.tiktok.com/@azulathecanecorso" class="text-white mx-2" aria-label="Invicta Cane Corso on TikTok"><i class="bi bi-tiktok fs-custom"></i></a>
                     <a target="_blank" rel="noopener" href="https://www.instagram.com/azulathecanecorso/" class="text-white mx-2" aria-label="Invicta Cane Corso on Instagram"><i class="bi bi-instagram fs-custom"></i></a>
                     <a href="mailto:info@invictacanecorso.com" class="text-white mx-2" aria-label="Email Invicta Cane Corso"><i class="bi bi-envelope fs-custom"></i></a>
                 </div>
                 <div class="text-center mt-4 mb-4">
-                    <a href="puppies.php" class="btn btn-outline-secondary text-white border-secondary">Available Puppies</a>
+                    <a href="puppies.php" class="btn btn-outline-dark text-white border-dark">Available Puppies</a>
                 </div>
             </div>
         </div>

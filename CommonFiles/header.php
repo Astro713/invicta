@@ -52,8 +52,7 @@ function web_header($opt = [])
     'home' => [
         'slides' => [
             ['image' => 'carousel_b1.jpg', 'alt' => 'First Slide', 'caption' => ''],
-            // ['image' => 'carousel_b3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
-            // ['image' => 'carousel_b2.jpg', 'alt' => 'Third Slide', 'caption' => ''],
+            // ['image' => 'carousel_b1.1.jpg', 'alt' => 'Second Slide', 'caption' => ''],
         ],
         'pages' => ['index.php']
     ],
@@ -209,6 +208,7 @@ function web_header($opt = [])
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button> -->
+            <div class="curve"><img src="{$prefix}images/slider-curve.svg" alt=""></div>
         </div>
         <!-- HEADER -->
     

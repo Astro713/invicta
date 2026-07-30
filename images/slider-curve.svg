@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"
+     id="Layer_1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1024 79.8"
+     style="enable-background:new 0 0 1024 79.8;"
+     xml:space="preserve">
+
+  <defs>
+    <rect id="SVGID_1_" y="0" width="1024" height="79.8"/>
+
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#252a2b"/>
+      <stop offset="50%" stop-color="#171c1d"/>
+      <stop offset="100%" stop-color="#0c1112"/>
+    </linearGradient>
+  </defs>
+
+  <clipPath id="SVGID_2_">
+    <use xlink:href="#SVGID_1_" style="overflow:visible;"/>
+  </clipPath>
+
+  <path
+    clip-path="url(#SVGID_2_)"
+    fill="url(#bgGradient)"
+    d="M0,79.8V0c0,0,168,56.7,512,56.7S1024,0,1024,0v79.8H0z"/>
+</svg>

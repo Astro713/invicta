@@ -51,10 +51,27 @@ function web_header($opt = [])
   $tab_slides = [
     'home' => [
         'slides' => [
-            ['image' => 'carousel_3.jpg', 'alt' => 'First Slide', 'caption' => ''],
-            // ['image' => 'Carousel_5.jpg', 'alt' => 'Second Slide', 'caption' => ''],
+            ['image' => 'carousel_b1.jpg', 'alt' => 'First Slide', 'caption' => ''],
+            // ['image' => 'carousel_b3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
+            // ['image' => 'carousel_b2.jpg', 'alt' => 'Third Slide', 'caption' => ''],
         ],
         'pages' => ['index.php']
+    ],
+    'dogs' => [
+        'slides' => [
+            ['image' => 'carousel_b3.jpg', 'alt' => 'First Slide', 'caption' => ''],
+            // ['image' => 'carousel_b3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
+            // ['image' => 'carousel_b2.jpg', 'alt' => 'Third Slide', 'caption' => ''],
+        ],
+        'pages' => ['dogs.php']
+    ],
+    'puppies' => [
+        'slides' => [
+            ['image' => 'carousel_b2.jpg', 'alt' => 'First Slide', 'caption' => ''],
+            // ['image' => 'carousel_b3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
+            // ['image' => 'carousel_b2.jpg', 'alt' => 'Third Slide', 'caption' => ''],
+        ],
+        'pages' => ['about.php']
     ]
 
   ];
