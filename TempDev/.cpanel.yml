@@ -8,7 +8,6 @@ deployment:
     - /bin/mkdir -p $DEPLOYPATH/js
     - /bin/mkdir -p $DEPLOYPATH/images
     - /bin/cp *.php $DEPLOYPATH
-    - /bin/cp robots.txt sitemap.xml $DEPLOYPATH
     - /bin/cp CommonFiles/*.php $DEPLOYPATH/CommonFiles/
     - /bin/cp css/* $DEPLOYPATH/css/
     - /bin/cp js/* $DEPLOYPATH/js/

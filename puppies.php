@@ -13,13 +13,13 @@ $puppies_video_header_extras = <<<HTML
 HTML;
 
 // Start Page Display
-web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>$puppies_video_header_extras]);
+web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'page_title'=>'Cane Corso Puppies near Houston, TX | Invicta Cane Corso', 'canonical_path'=>'/puppies.php', 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>$puppies_video_header_extras]);
 
 ?>
 
 <div class="row mt-4">
   <div class="col">
-  <h2><?= $page_title ?></h2>
+  <h1><?= $page_title ?></h1>
 
 <?php
   if (true)
@@ -54,6 +54,14 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
     </div>
 </div>
 </div>
+
+<section id="flight-nanny" class="row justify-content-center mt-5 dog-profile-anchor" aria-labelledby="flight-nanny-heading">
+  <div class="col-12 col-md-8 text-center">
+    <h2 id="flight-nanny-heading" class="ig-index-font-h2 mb-3">Domestic Flight Nanny Delivery</h2>
+    <p class="text-white mb-3">For families who live outside Texas, Invicta Cane Corso may arrange delivery to destinations within the United States through a trusted flight nanny. The flight nanny personally accompanies the puppy during air travel and coordinates a safe handoff with the new family.</p>
+    <p class="text-white mb-3">Flight nanny delivery is optional, subject to availability and applicable airline and veterinary travel requirements, and requires an additional fee based on the destination and travel arrangements. Details and the total delivery cost will be agreed upon before travel is scheduled.</p>
+  </div>
+</section>
 
 <?php
   }

@@ -22,6 +22,12 @@ function web_footer($opt = [])
   global $config;
   $last_mod_date = "Last updated " . date ("d F Y.", getlastmod());
   $year = date("Y");
+  $google_review_html = '';
+  $google_review_url = trim((string)($config['web']['google_review_url'] ?? ''));
+  if (filter_var($google_review_url, FILTER_VALIDATE_URL)) {
+    $google_review_url = htmlspecialchars($google_review_url, ENT_QUOTES);
+    $google_review_html = "<li class=\"py-1\"><a href=\"{$google_review_url}\" target=\"_blank\" rel=\"noopener\" class=\"text-white\">Review Invicta Cane Corso on Google</a></li>";
+  }
 
   $f_out = <<<HTML
 
@@ -59,35 +65,38 @@ function web_footer($opt = [])
           <div class="row">
               <div class="col-6 col-lg-4">
                   <h5 class="mt-3 mb-1">{$config['conference']['conferencename']}</h5>
-                  <p>Location: {$config['conference']['conferencelocation']}</p>
-                  <p>Registration: American Kennel Club (AKC)</p>
+                  <p class="mb-1">Location: {$config['conference']['conferencelocation']}<br><small>Serving Greater Houston and surrounding Texas communities</small></p>
+                  <p>Registration: American Kennel Club (AKC) Registered Dogs</p>
               </div>
               <div class="col">
                   <h6 class="mt-3 mb-1">Menu</h6>
                   <ul class="list-unstyled ">
-                      <li class="py-1"><a href="index.php">Home</a></li>
+                      <li class="py-1"><a href="/">Home</a></li>
                       <li class="py-1"><a href="about.php">About Us</a></li>
-                      <li class="py-1"><a href="puppies.php">Available Puppies</a></li>
+                      <li class="py-1"><a href="dogs.php">Our Cane Corsos</a></li>
+                      <li class="py-1"><a href="puppies.php">Available Cane Corso Puppies</a></li>
                   </ul>
               </div>
               <div class="col">
                   <h6 class="mt-3 mb-1">Contact</h6>
                   <ul class="list-unstyled ">
-                      <li class="py-1">Contact: <a href="mailto:{$config['email']['emailsupport']}" class="text-white">{$config['email']['emailsupport']}</a></li>
+                      <li class="py-1">Email: <a href="mailto:{$config['email']['emailsupport']}" class="text-white" aria-label="Email Invicta Cane Corso">{$config['email']['emailsupport']}</a></li>
+                      <li class="py-1">Instagram: <a href="https://www.instagram.com/azulathecanecorso/" target="_blank" rel="noopener" class="text-white" aria-label="Contact Invicta Cane Corso on Instagram">@azulathecanecorso</a></li>
+                      <li class="py-1">TikTok: <a href="https://www.tiktok.com/@azulathecanecorso" target="_blank" rel="noopener" class="text-white" aria-label="Contact Invicta Cane Corso on TikTok">@azulathecanecorso</a></li>
+                      {$google_review_html}
                   </ul>
               </div>
               <div class="col-6 col-lg-3 text-lg-center">
                   <h6 class="mt-3 mb-1">Social Media Links</h6>
                   <div class="social-media ">
-                    <a target="_blank" href="https://www.tiktok.com/@azulathecanecorso" class="text-white mx-2"><i class="bi bi-tiktok fs-custom"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/azulathecanecorso/" class="text-white mx-2"><i class="bi bi-instagram fs-custom"></i></a>
-                    <a target="_blank" href="#" class="text-white mx-2"><i class="bi bi-youtube fs-custom"></i></a>
+                    <a target="_blank" rel="noopener" href="https://www.tiktok.com/@azulathecanecorso" class="text-white mx-2" aria-label="Invicta Cane Corso on TikTok"><i class="bi bi-tiktok fs-custom" aria-hidden="true"></i></a>
+                    <a target="_blank" rel="noopener" href="https://www.instagram.com/azulathecanecorso/" class="text-white mx-2" aria-label="Invicta Cane Corso on Instagram"><i class="bi bi-instagram fs-custom" aria-hidden="true"></i></a>
                   </div>
               </div>
           </div>
           <hr>
           <div class="d-sm-flex justify-content-between py-3">
-              <p>&copy;{$year} <a href="#" target="_blank" class="text-white">Invicta Cane Corso</a></p>
+              <p>&copy;{$year} <a href="/" class="text-white">Invicta Cane Corso</a></p>
               <!-- <p class="text-light text-decoration-none pe-4">
                   {$last_mod_date}
               </p> -->

@@ -1,0 +1,5 @@
+Options -Indexes
+
+<FilesMatch "(^_config|\.toml$)">
+  Require all denied
+</FilesMatch>

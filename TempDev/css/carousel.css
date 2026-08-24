@@ -6,10 +6,9 @@
   width: 100%;
   max-width: 100%;
   background-color: #000000;
-  /* 51.2vw reaches the 80em max at about 2500px wide. */
-  height: clamp(20rem, 51.2vw, 80em);
-  max-height: clamp(20rem, 51.2vw, 80em);
-  border-bottom: 1px solid #000000;
+  height: clamp(18rem, 46.08vw, 72em);
+  max-height: clamp(18rem, 46.08vw, 72em);
+  /* border-bottom: 1px solid #000000; */
 }
 
 #IG27-carousel.compact {
@@ -98,6 +97,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#IG27-carousel .carousel-item img[src$="carousel_b1.jpg"] {
+  object-position: center 30%;
 }
 
 /* #IG27-carousel:not(.compact) .carousel-item img {
@@ -411,7 +414,7 @@
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #IG27-carousel .carousel-slide-caption {
     right: 1%;
     bottom: 1%;
@@ -421,11 +424,28 @@
     letter-spacing: 0.04em;
   }
 
+} */
+
+@media (max-width: 768px) {
+  #IG27-carousel .carousel-slide-caption {
+    display: none;
+  }
+
   #IG27-carousel .carousel-indicators {
     display: none;
   }
 }
 
+
+/* #IG27-carousel .carousel-indicators {
+  z-index: 10;
+  pointer-events: auto;
+  bottom: clamp(1.5rem, 3vw, 4rem);
+}
+
+#IG27-carousel .carousel-indicators button {
+  pointer-events: auto;
+} */
 
 
 .carousel-item .caption-box .conf-name {
@@ -559,3 +579,5 @@
     transform: translateX(0);
   }
 }
+#IG27-carousel .curve { position:absolute; bottom: -10px; width:100%; left: 0; z-index: 9; pointer-events: none; }
+#IG27-carousel .curve img { pointer-events: none; }

@@ -5,13 +5,13 @@ require_once('CommonFiles/_config.php');
 $page_title = "About Invicta Cane Corso";
 
 // Start Page Display
-web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>null]);
+web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'page_title'=>'About Our Cane Corso Program | Invicta Cane Corso', 'canonical_path'=>'/about.php', 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>null]);
 
 ?>
 
 <div class="row mt-4">
   <div class="col-12">
-    <h2><?= $page_title ?></h2>
+    <h1><?= $page_title ?></h1>
     <hr>
   </div>
 </div>
@@ -19,7 +19,7 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
 
 <div class="row mt-5 text-center justify-content-center">
   <div class="col-md-6 ">
-    <img src="images/invictas_azula.jpg" alt="" class="img-fluid mx-auto d-block rounded-1 shadow-lg" style="max-height: 450px; width: auto;">
+    <img src="images/invictas_azula.jpg" alt="Invicta's Azula, a Cane Corso from the Invicta breeding program" class="img-fluid mx-auto d-block rounded-1 shadow-lg" style="max-height: 450px; width: auto;">
   </div>
 </div>
 

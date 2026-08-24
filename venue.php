@@ -5,7 +5,7 @@ require_once('CommonFiles/_config.php');
 $page_title = "Venue";
 
 // Start Page Display
-web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>null]);
+web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'page_title'=>'Invicta Cane Corso Location | Cypress, TX', 'canonical_path'=>'/venue.php', 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>null]);
 
 ?>
 

@@ -5,7 +5,7 @@ require_once('CommonFiles/_config.php');
 $page_title = "Our Dogs";
 
 // Start Page Display
-web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>null]);
+web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'page_title'=>'Our Cane Corsos | Invicta Cane Corso', 'canonical_path'=>'/dogs.php', 'auth_needed'=>$config['auth']['enabled'], 'header_extras'=>null]);
 
 ?>
 
@@ -22,10 +22,10 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
 <div id="azula" class="container p-5 mt-4 mb-5 dog-profile-anchor">
     <div class="row align-items-center">
         <div class="col-md-5">
-            <img src="images/invictas_azula.jpg" class="img-fluid mx-auto d-block rounded-2 shadow-lg" style="max-height: 450px; width: auto;">
+            <img src="images/invictas_azula.jpg" alt="Invicta's Azula, a female Cane Corso with European bloodlines" class="img-fluid mx-auto d-block rounded-2 shadow-lg" style="max-height: 450px; width: auto;">
         </div>
         <div class="col-md-7">
-            <p class="ig-index-font-h2 mb-3 mt-3">Invicta's Azula</p>
+            <h2 class="ig-index-font-h2 mb-3 mt-3">Invicta's Azula</h2>
             <p class="text-white mb-3"><span class="invicta-rg-text">Azula</span> is a majestic Cane Corso who reflects the original standard of the breed with strength, balance, athleticism, and presence. Her bloodline is primarily European and includes respected pedigree influence from <span class="invicta-rg-text">X-Man of Barcelona, Spain</span>. She embodies the qualities that make the Cane Corso exceptional: powerful movement, intense drive, and reliable protective instincts. Whether in a family setting, on open land, or in a working environment, Azula carries herself with the awareness, loyalty, and purpose expected from a true Cane Corso.</p>
         </div>
     </div>
@@ -35,11 +35,11 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
     <div class="container p-5">
         <div class="row align-items-center">
             <div class="col-md-7 order-2 order-md-1">
-                <p class="ig-index-font-h2 mb-3 mt-3">Mad River's Ozai</p>
+                <h2 class="ig-index-font-h2 mb-3 mt-3">Mad River's Ozai</h2>
                 <p class="text-white mb-3"><span class="invicta-rg-text">Ozai</span> represents the future of the Invicta Cane Corso program. Built from one of the strongest American bloodlines through <span class="invicta-rg-text">Mad River Cane Corso in Ohio</span>, he is young, composed, and already showing the natural confidence that defines a well-bred Cane Corso. At just 11 months old, Ozai stands 27.5 inches at the shoulder and weighs 130 pounds. His broad shoulders, powerful paws, strong head, and balanced structure are setting the tone for the quality, strength, and presence expected in future Invicta litters.</p>
             </div>
             <div class="col-md-5 order-1 order-md-2">
-                <img src="images/invictas_ozai_3.jpg" class="img-fluid mx-auto d-block rounded-3 shadow-lg" style="max-height: 475px; width: auto;">
+                <img src="images/invictas_ozai_3.jpg" alt="Mad River's Ozai, a male Cane Corso with American bloodlines" class="img-fluid mx-auto d-block rounded-3 shadow-lg" style="max-height: 475px; width: auto;">
             </div>
         </div>
     </div>
@@ -50,8 +50,8 @@ web_header(['depth'=>1, 'fn'=>pathinfo(__FILE__, PATHINFO_BASENAME), 'auth_neede
 
 <div class="row justify-content-center mt-5 mb-5">
     <div class="col-md-6 text-center">
-    <a href="#">
-        <img src="images/invicta_logo_master.png" alt="" class="img-fluid index-logo">
+    <a href="/" aria-label="Invicta Cane Corso home">
+        <img src="images/invicta_logo_master.png" alt="Invicta Cane Corso" class="img-fluid index-logo">
     </a>
     </div>
 </div>

@@ -17,6 +17,9 @@ function web_header($opt = [])
     'depth'=>1,
     'fn'=>null,
     'page_title'=>null,
+    'meta_description'=>'Invicta Cane Corso is a Cane Corso breeding program in Cypress, Texas, serving Greater Houston with thoughtfully raised dogs and updates on planned litters.',
+    'canonical_path'=>null,
+    'og_image'=>'/images/invicta_logo_master.png',
     'header_extras'=>null,
     'container_class'=>'container',
     'auth_needed'=>false,
@@ -42,7 +45,85 @@ function web_header($opt = [])
   $conf_brand_bottom = htmlspecialchars($conf_brand_bottom_raw, ENT_QUOTES);
   $conf_brand_label = htmlspecialchars(trim(strip_tags($conf_brand_top_raw . ' ' . $conf_brand_bottom_raw)), ENT_QUOTES);
 
-  $page_title = $wh_config['page_title'] ? ($wh_config['page_title'] . ' || ') : '';
+  $current_page = $wh_config['fn'];
+  $is_home = ($current_page === 'index.php');
+  $canonical_base_url = rtrim((string)($config['web']['canonical_base_url'] ?? 'https://www.invictacanecorso.com'), '/');
+  $canonical_path = $wh_config['canonical_path'];
+  if ($canonical_path === null) {
+    $canonical_path = $is_home ? '/' : '/' . ltrim((string)$current_page, '/');
+  }
+  $canonical_url_raw = $canonical_base_url . '/' . ltrim((string)$canonical_path, '/');
+  $canonical_url = htmlspecialchars($canonical_url_raw, ENT_QUOTES);
+
+  $page_title_raw = trim((string)($wh_config['page_title'] ?? ''));
+  if ($page_title_raw === '') {
+    $page_title_raw = 'Houston-Area Cane Corso Breeder | Invicta Cane Corso';
+  }
+  $page_title = htmlspecialchars($page_title_raw, ENT_QUOTES);
+  $meta_description_raw = trim((string)$wh_config['meta_description']);
+  $meta_description = htmlspecialchars($meta_description_raw, ENT_QUOTES);
+  $og_image_raw = $canonical_base_url . '/' . ltrim((string)$wh_config['og_image'], '/');
+  $og_image = htmlspecialchars($og_image_raw, ENT_QUOTES);
+
+  $google_verification_html = '';
+  $google_site_verification = trim((string)($config['web']['google_site_verification'] ?? ''));
+  if ($google_site_verification !== '') {
+    $google_site_verification = htmlspecialchars($google_site_verification, ENT_QUOTES);
+    $google_verification_html = "<meta name=\"google-site-verification\" content=\"{$google_site_verification}\">";
+  }
+
+  $google_analytics_html = '';
+  $google_analytics_id = trim((string)($config['web']['google_analytics_id'] ?? ''));
+  if (preg_match('/^G-[A-Z0-9]+$/i', $google_analytics_id)) {
+    $google_analytics_id = htmlspecialchars($google_analytics_id, ENT_QUOTES);
+    $google_analytics_html = <<<HTML
+        <script async src="https://www.googletagmanager.com/gtag/js?id={$google_analytics_id}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '{$google_analytics_id}');
+        </script>
+    HTML;
+  }
+
+  $structured_data_html = '';
+  if ($is_home) {
+    $same_as_urls = [
+      'https://www.tiktok.com/@azulathecanecorso',
+      'https://www.instagram.com/azulathecanecorso/',
+    ];
+    $google_business_profile_url = trim((string)($config['web']['google_business_profile_url'] ?? ''));
+    if (filter_var($google_business_profile_url, FILTER_VALIDATE_URL)) {
+      $same_as_urls[] = $google_business_profile_url;
+    }
+
+    $organization_data = [
+      '@context' => 'https://schema.org',
+      '@type' => 'Organization',
+      '@id' => $canonical_base_url . '/#organization',
+      'name' => 'Invicta Cane Corso',
+      'url' => $canonical_base_url . '/',
+      'logo' => $canonical_base_url . '/images/invicta_logo_master.png',
+      'description' => $meta_description_raw,
+      'email' => 'mailto:' . $config['email']['emailsupport'],
+      'address' => [
+        '@type' => 'PostalAddress',
+        'addressLocality' => 'Cypress',
+        'addressRegion' => 'TX',
+        'addressCountry' => 'US',
+      ],
+      'areaServed' => [
+        ['@type' => 'City', 'name' => 'Cypress, Texas'],
+        ['@type' => 'City', 'name' => 'Houston, Texas'],
+        ['@type' => 'AdministrativeArea', 'name' => 'Greater Houston'],
+      ],
+      'sameAs' => $same_as_urls,
+    ];
+    $organization_json = json_encode($organization_data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    $structured_data_html = "<script type=\"application/ld+json\">{$organization_json}</script>";
+  }
+
   $prefix = str_repeat('../', $wh_config['depth']-1);
   $site_css_version = filemtime(__ROOT__ . "/css/{$css_name}.css");
   $carousel_css_version = filemtime(__ROOT__ . '/css/carousel.css');
@@ -51,14 +132,14 @@ function web_header($opt = [])
   $tab_slides = [
     'home' => [
         'slides' => [
-            ['image' => 'carousel_b1.jpg', 'alt' => 'First Slide', 'caption' => ''],
+            ['image' => 'carousel_b1.jpg', 'alt' => 'Invicta Cane Corso dogs in Cypress, Texas', 'caption' => ''],
             // ['image' => 'carousel_b1.1.jpg', 'alt' => 'Second Slide', 'caption' => ''],
         ],
         'pages' => ['index.php']
     ],
     'dogs' => [
         'slides' => [
-            ['image' => 'carousel_b3.jpg', 'alt' => 'First Slide', 'caption' => ''],
+            ['image' => 'carousel_b3.jpg', 'alt' => 'Cane Corso from the Invicta breeding program', 'caption' => ''],
             // ['image' => 'carousel_b3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
             // ['image' => 'carousel_b2.jpg', 'alt' => 'Third Slide', 'caption' => ''],
         ],
@@ -66,7 +147,7 @@ function web_header($opt = [])
     ],
     'puppies' => [
         'slides' => [
-            ['image' => 'carousel_b2.jpg', 'alt' => 'First Slide', 'caption' => ''],
+            ['image' => 'carousel_b2.jpg', 'alt' => 'Invicta Cane Corso in Cypress, Texas', 'caption' => ''],
             // ['image' => 'carousel_b3.jpg', 'alt' => 'Second Slide', 'caption' => ''],
             // ['image' => 'carousel_b2.jpg', 'alt' => 'Third Slide', 'caption' => ''],
         ],
@@ -75,10 +156,8 @@ function web_header($opt = [])
 
   ];
   $default_slides = [
-    ['image' => 'carousel_4.1.jpg', 'alt' => 'First Slide', 'caption' => '']
+    ['image' => 'carousel_4.1.jpg', 'alt' => 'Invicta Cane Corso', 'caption' => '']
   ];
-  $current_page = $wh_config['fn'];
-  $is_home = ($current_page === 'index.php');
   $carousel_slides = $default_slides;
   foreach ($tab_slides as $tab => $tab_config) {
     if (isset($tab_config['pages']) && in_array($current_page, $tab_config['pages'])) {
@@ -132,7 +211,19 @@ function web_header($opt = [])
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{$page_title} {$conf_name} || {$conf_location}</title>
+        <title>{$page_title}</title>
+        <meta name="description" content="{$meta_description}">
+        <link rel="canonical" href="{$canonical_url}">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Invicta Cane Corso">
+        <meta property="og:title" content="{$page_title}">
+        <meta property="og:description" content="{$meta_description}">
+        <meta property="og:url" content="{$canonical_url}">
+        <meta property="og:image" content="{$og_image}">
+        <meta name="twitter:card" content="summary_large_image">
+        {$google_verification_html}
+        {$google_analytics_html}
+        {$structured_data_html}
         <link rel="icon" type="image/png" href="images/favicon_3.png">
         <link href="https://fonts.cdnfonts.com/css/placard-next" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/helvetica-now" rel="stylesheet">
@@ -176,7 +267,7 @@ function web_header($opt = [])
             <div class="carousel-logo">
                 <div class="carousel-brand-panel" aria-label="{$conf_brand_label}">
                     <span class="carousel-vertical-title" aria-hidden="true">{$conf_brand_top}</span>
-                    <a class="carousel-crest-link" href="{$prefix}index.php" aria-label="{$conf_brand_label} home">
+                    <a class="carousel-crest-link" href="/" aria-label="{$conf_brand_label} home">
                         <img src="{$prefix}images/invicta_logo_master.png" alt="">
                     </a>
                     <div class="carousel-brand-copy">

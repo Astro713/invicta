@@ -62,7 +62,19 @@ $db_PDO_options = [
 
 $config = loadLocalConfig(__DIR__ . '/_config.toml');
 $config['auth']['enabled'] = false;
-$config['web']['confurl'] = 'index.php';
+$config['web']['confurl'] = '/';
+$config['web']['canonical_base_url'] = 'https://www.invictacanecorso.com';
+
+// Optional Google integrations. Leave these blank until the real values are
+// created in Google Search Console, Google Analytics, and Google Business.
+$config['web']['google_site_verification'] = '';
+$config['web']['google_analytics_id'] = '';
+$config['web']['google_business_profile_url'] = '';
+$config['web']['google_review_url'] = '';
+
+// Keep the public contact address consistent across every page and in the
+// organization structured data.
+$config['email']['emailsupport'] = 'info@invictacanecorso.com';
 
 date_default_timezone_set($config['conference']['tzid']);
 
